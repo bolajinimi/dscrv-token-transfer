@@ -18,6 +18,7 @@ const TransferPage = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const shoeId = searchParams.get('id');
+  
 
   useEffect(() => {
     // Fetch shoe details based on the ID
