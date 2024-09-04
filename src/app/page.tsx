@@ -31,13 +31,13 @@ const HomePage = () => {
       <img
         src={dscrvLogo.src}
         alt="DSCVR Logo"
-        className="absolute top-4 right-4 w-24 h-auto"
+        className="absolute top-4 right-4 w-16 h-auto sm:w-24" // Responsive size for logo
       />
       
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
+      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-8 sm:py-12">
         {/* Header */}
         <motion.h1
-          className="text-6xl font-extrabold mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 sm:mb-6"
           animate={{ opacity: [0, 1, 0], y: [0, -20, 0] }}
           transition={{ duration: 2, repeat: Infinity, repeatType: 'reverse' }}
           style={{ color: '#E0E0E0' }} // Light text color
@@ -46,7 +46,7 @@ const HomePage = () => {
         </motion.h1>
         
         <motion.p
-          className="text-2xl mb-12 max-w-xl"
+          className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 max-w-xs sm:max-w-sm md:max-w-xl"
           animate={{ scale: [1, 1.1, 1], rotate: [0, 2, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           style={{ color: '#D0D0D0' }} // Slightly darker text color for contrast
@@ -57,7 +57,7 @@ const HomePage = () => {
         {/* Button */}
         <Link
           href="/shoe"
-          className="bg-gradient-to-r from-purple-700 to-blue-700 px-6 py-3 rounded-full text-white font-bold text-lg hover:from-purple-800 hover:to-blue-800 transition duration-300 shadow-lg transform hover:scale-105"
+          className="bg-gradient-to-r from-purple-700 to-blue-700 px-4 py-2 sm:px-6 sm:py-3 rounded-full text-white font-bold text-base sm:text-lg hover:from-purple-800 hover:to-blue-800 transition duration-300 shadow-lg transform hover:scale-105"
         >
           Start Shopping
         </Link>
